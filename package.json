@@ -30,6 +30,9 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix"
+    "*.ts": [
+      "eslint --cache --fix",
+      "npm run test:staged"
+    ]
   }
 }
