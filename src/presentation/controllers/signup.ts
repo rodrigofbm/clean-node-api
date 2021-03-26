@@ -4,10 +4,6 @@ import { MissingParamError } from './../errors/missing-param.error'
 import { HttpRequest, HttpResponse } from './../protocols/http'
 export class SignUpController implements Controller {
   handle (httpRequest: HttpRequest): HttpResponse {
-    if (!httpRequest.body.name) {
-      return badRequest(new MissingParamError('name'))
-    }
-
     const requiredParams = ['name', 'email', 'password', 'passwordConfirmation']
 
     for (const param of requiredParams) {
