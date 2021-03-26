@@ -5,7 +5,7 @@
   "main": "test.js",
   "scripts": {
     "test": "jest",
-    "prepare": "husky install"
+    "test:staged": "jest"
   },
   "keywords": [],
   "author": "",
