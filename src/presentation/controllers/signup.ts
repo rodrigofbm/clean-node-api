@@ -7,8 +7,12 @@ export class SignUpController {
       return badRequest(new MissingParamError('name'))
     }
 
-    if (!httpRequest.body.email) {
-      return badRequest(new MissingParamError('email'))
+    const requiredParams = ['name', 'email']
+
+    for (const param of requiredParams) {
+      if (!httpRequest.body[param]) {
+        return badRequest(new MissingParamError(param))
+      }
     }
 
     return {

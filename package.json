@@ -5,8 +5,7 @@
   "main": "test.js",
   "scripts": {
     "test": "jest --passWithNoTests --watch",
-    "test:staged": "jest --passWithNoTests",
-    "prepare": "husky install"
+    "test:staged": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
@@ -31,8 +30,5 @@
       "eslint --cache --fix",
       "npm run test:staged"
     ]
-  },
-  "dependencies": {
-    "husky": "^5.2.0"
   }
 }
